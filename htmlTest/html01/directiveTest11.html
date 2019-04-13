@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+    <input type="text" ng-model="to"/>
+    <!-- 调用指令 -->
+    <div scope-example ng-model="to"
+         on-send="sendMail(email)"
+         from-name="ari@fullstack.io" />
+</body>
+<script src="js/directiveTest11.js"></script>
+</html>

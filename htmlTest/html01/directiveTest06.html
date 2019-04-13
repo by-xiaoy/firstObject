@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+<div ng-controller="CityController">
+    <select ng-model="city"
+            ng-options="city.name for city in cities">
+        <option value="">Choose City</option>
+    </select>
+    Best City: {{ city.name }}
+</div>
+<script src="js/directiveTest06.js"></script>
+</body>
+</html>

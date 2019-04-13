@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+    <input ng-model="name" placeholder="plase input">
+    <div>{{name|uppercase}}</div>
+<!--过滤器filter的使用-->
+    <div>
+        {{ [{
+        'name': 'Ari',
+        'City': 'San Francisco',
+        'favorite food': 'Pizza'
+        },{
+        'name': 'Nate',
+        'City': 'San Francisco',
+        'favorite food': 'indian food'
+        },{
+        'name': 'Nate',
+        'City': 'San Francisco',
+        'favorite food': 'Pizza'
+        }] | filter:{'favorite food': 'Pizza'} }}
+    </div>
+    <br>
+    <div>
+        <h6>过滤器filter</h6>
+        {{ {'name': 'Ari', 'City': 'SanFrancisco'} | json }}
+    </div>
+    <br>
+    <div>
+        <h6>过滤器limitTo 截取字符串</h6>
+        {{ 'San Francisco is very cloudy' | limitTo:-6 }}
+    </div>
+    <br>
+    <div>
+        <h6>orderBy 排序</h6>
+        {{ [{
+        'name': 'Ari',
+        'status': 'awake'
+        },{
+        'name': 'Q',
+        'status': 'sleeping'
+        },{
+        'name': 'Nate',
+        'status': 'awake'
+        }] | orderBy:'name':true }}
+    </div>
+
+<hr>
+    <h4>表单验证</h4>
+<div>
+    <h6>最最小长度</h6>
+    <input type="text" ng-minlength="5" />
+    <h6>最最大长度</h6>
+    <input type="text" ng-maxlength="20" />
+    <h6>匹配正确的表达式</h6>
+    <input type="text" ng-pattern="[a-zA-Z]" />
+    <h6>验证邮件地址格式</h6>
+    <input type="email" name="email" ng-model="user.email" />
+
+    <h6>formName.inputFieldName.{不同的方法属性} 判断表单的状态</h6>
+</div>
+</body>
+</html>

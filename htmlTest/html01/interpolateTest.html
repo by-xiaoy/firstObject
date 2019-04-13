@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-controller="MyController">
+    <div id="emailEditor">
+        <input ng-model="to"
+               type="email"
+               placeholder="Recipient" />
+        <textarea ng-model="emailBody"></textarea>
+    </div>
+    <div id="emailPreview">
+        <pre>__ previewText __</pre>
+    </div>
+<script src="js/interpolateTest.js"></script>
+<script src="js/interpolateSerTest.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>指令</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+<h3>关于controller作用域</h3>
+<div ng-controller="ParentController">
+    <p>We can access: {{ rootProperty }}
+        and {{ parentProperty }}</p>
+    <div ng-controller="ChildController">
+        <p>
+            We can access:
+            {{ rootProperty }} and
+            {{ parentProperty }} and
+            {{ childProperty }}
+        </p>
+        <p>{{ fullSentenceFromChild }}</p>
+    </div>
+</div>
+<script src="js/directiveTest01.js"></script>
+</body>
+</html>

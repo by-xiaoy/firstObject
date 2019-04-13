@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+    <div ng-controller='MainController'>
+        Outside myDirective: {{ myProperty }}
+        <div my-directive ng-init="myProperty = 'wow, this is cool'">
+            Inside myDirective: {{ myProperty }}
+        </div>
+    </div>
+<script src="js/directiveTest10.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+    <label>Their URL field:</label>
+    <input type="text" ng-model="theirUrl">
+    <div my-directive
+         some-attr="theirUrl"
+         my-link-text="Click me to go to Google"></div>
+</body>
+<script src="js/directiveTest03.js"></script>
+</html>

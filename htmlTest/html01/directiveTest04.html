@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+    <input type="text" ng-model="someProperty" placeholder="TypetoEnable">
+    <button ng-model="button" ng-disabled="!someProperty">AButton</button>
+
+    <br/>
+    <textarea ng-disabled="isDisabled">Wait5seconds</textarea>
+    <br/>
+    Type here to make sibling readonly:
+    <input type="text" ng-model="somePropertyred"><br/>
+    <input type="text"
+           ng-readonly="somePropertyred"
+           value="Some text here"/>
+
+<br/>
+    <label>someProperty = {{somePropertyche}}</label>
+    <input type="checkbox"
+           ng-checked="somePropertyche"
+           ng-init="somePropertyche = true"
+           ng-model="somePropertyche">
+
+<br>
+    <label>someProperty = {{anotherProperty}}</label>
+    <input type="checkbox"
+           ng-checked="anotherProperty"
+           ng-init="anotherProperty = false"
+           ng-model="anotherProperty">
+
+    <label>Select Two Fish:</label>
+    <input type="checkbox"
+           ng-model="isTwoFish"><br/>
+    <select>
+        <option>One Fish</option>
+        <option ng-selected="isTwoFish">Two Fish</option>
+    </select>
+
+    <br>
+    <!-- 当 href 包含一个 {{expression}}时总是使用 ng-href -->
+    <a ng-href="{{ myHref }}">I'm feeling lucky, when I load</a>
+
+<br>
+    <h1>WrongWay</h1>
+    <img src="{{imgSrc}}"/>
+    <h1>Rightway</h1>
+    <img ng-src="{{imgSrc}}"/>
+
+</body>
+<script src="js/directiveTest04.js"></script>
+</html>
